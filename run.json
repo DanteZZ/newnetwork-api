@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name": "nn_api",
+            "script": "npm",
+            "args": "run start"
+        }
+    ]
+}
