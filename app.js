@@ -9,6 +9,8 @@ var registerPayRouter = require('./routes/registerPay');
 var clearRouter = require('./routes/clear');
 var registerOrderRouter = require('./routes/registerOrder');
 
+var sberPay = require('./routes/sberPay');
+
 const cors = require('cors');
 
 var app = express();
@@ -28,5 +30,6 @@ app.use('/pay', indexRouter);
 app.use('/clear', clearRouter);
 app.use('/registerOrder', registerOrderRouter);
 
+app.use('/payment_app.cgi', sberPay);
 
 module.exports = app;

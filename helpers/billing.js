@@ -50,11 +50,11 @@ class LB {
         if (find) {
             return find;
         }
-        throw new Error("Договор не найден")
+        throw {code:3,message:"Договор не найден"};
     }
 
     getCurrencies = async () => await this._callMethod(this.client.getCurrencies,{})
-
+    getPayments = async (agrmid) => await this._callMethod(this.client.getPayments,{agrmid})
     payment = async (agrmid,amount,receipt) => {
         const payload = {
             val:{
