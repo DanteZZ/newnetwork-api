@@ -26,6 +26,7 @@ router.get('/', async function(req, res, next) {
     _db.close();
     res.status(200).send(resp);
   } catch (e) {
+    console.log(e);
     res.status(500).send({error:e.toString()});
   }
 });

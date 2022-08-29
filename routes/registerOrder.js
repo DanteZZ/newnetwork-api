@@ -28,7 +28,7 @@ router.post('/', async function(req, res, next) {
     await axios.get(`https://api.telegram.org/bot${process.env.TG_BOT_TOKEN}/sendMessage`, {
       params: {
         chat_id: process.env.TG_CHAT,
-        text:["[Новая запрос на подключение]",params.description,`http://crm.new-network.ru/#Opportunity/view/`+opp.id].join("\n")
+        text:["[Новый запрос на подключение]",params.description,`http://crm.new-network.ru/#Opportunity/view/`+opp.id].join("\n")
       }
     })
     res.status(200).send({result:true});
